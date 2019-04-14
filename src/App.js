@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Todolist} from './todolist';
 import {TodoForm} from './todoForm';
+import SimpleStorage from "react-simple-storage";
 
 
 
@@ -8,10 +9,10 @@ class App extends Component {
     constructor(){
         super();
         this.state={myTasks:[
-           {text:"İlk görev",status:"passive"},
+           {text:"Yapilacak ilk is",status:"passive"},
            {text:"Kitap oku",status:"passive"},
-           {text:"Ders çalış",status:"passive"},
-           {text:"Kodlama",status:"passive"}
+           {text:"Interstellar izle",status:"passive"},
+           {text:"Erken uyu",status:"passive"}
         ]};
         this.addTask=this.addTask.bind(this);
         this.done=this.done.bind(this);
@@ -48,6 +49,7 @@ class App extends Component {
         return (
 
           <div className="content">
+             <SimpleStorage parent={this} />
            
             <TodoForm addTask={this.addTask} />
             <Todolist myTasks= {this.state.myTasks} done={this.done} remove={this.remove} />
