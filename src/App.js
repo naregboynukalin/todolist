@@ -8,10 +8,10 @@ class App extends Component {
     constructor(){
         super();
         this.state={myTasks:[
-           {text:"Yapilacak ilk is",status:"passive"},
+           {text:"İlk görev",status:"passive"},
            {text:"Kitap oku",status:"passive"},
-           {text:"Interstellar izle",status:"passive"},
-           {text:"Erken uyu",status:"passive"}
+           {text:"Ders çalış",status:"passive"},
+           {text:"Kodlama",status:"passive"}
         ]};
         this.addTask=this.addTask.bind(this);
         this.done=this.done.bind(this);
